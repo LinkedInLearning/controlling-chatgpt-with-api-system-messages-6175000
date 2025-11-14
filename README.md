@@ -1,33 +1,49 @@
 # Controlling ChatGPT with Custom Instructions or API System Messages
-This is the repository for the LinkedIn Learning course `course-name`. The full course is available from [LinkedIn Learning][lil-course-url].
+This is the repository for the LinkedIn Learning course `Controlling ChatGPT with Custom Instructions or API System Messages`. The full course is available from [LinkedIn Learning][lil-course-url].
 
 ![course-name-alt-text][lil-thumbnail-url] 
 
-_See the readme file in the main branch for updated instructions and information._
+Custom Instructions in ChatGPT allow you to provide additional context and even format the type of response you want from the system every time you interact with it. In the OpenAI Chat Completions API you can access the same functionality using the System and Assistant messages. In this short course, learn how to take advantage of these features to get more consistent and customizable responses from both systems.
+
 ## Instructions
-This repository has branches for each of the videos in the course. You can use the branch pop up menu in github to switch to a specific branch and take a look at the course at that stage, or you can add `/tree/BRANCH_NAME` to the URL to go to the branch you want to access.
+This repository provides examples of how to use message roles and the `instructions` parameter to control the output of OpenAI's language models.
 
-## Branches
-The branches are structured to correspond to the videos in the course. The naming convention is `CHAPTER#_MOVIE#`. As an example, the branch named `02_03` corresponds to the second chapter and the third video in that chapter. 
-Some branches will have a beginning and an end state. These are marked with the letters `b` for "beginning" and `e` for "end". The `b` branch contains the code as it is at the beginning of the movie. The `e` branch contains the code as it is at the end of the movie. The `main` branch holds the final state of the code when in the course.
+> [!NOTE]
+> The easiest way to run and interact with the examples is by opening this repository in GitHub Codespaces.
 
-When switching from one exercise files branch to the next after making changes to the files, you may get a message like this:
+The examples are found in two folders:
+- `./CompletionsAPI` has examples using GitHub Models and the Completions API.
+- `./ResponsesAPI` has examples using OpenAI's API and the Responses API.
 
-    error: Your local changes to the following files would be overwritten by checkout:        [files]
-    Please commit your changes or stash them before you switch branches.
-    Aborting
+### Setting up the Completions API examples
+If you're running the repository in GitHub Codespaces, the examples in `./CompletionsAPI` will work out of the box without any further setup. GitHub Models are automatically authenticated in the Codespace and the completions will generate when called.
 
-To resolve this issue:
-	
-    Add changes to git using this command: git add .
-	Commit changes using this command: git commit -m "some message"
+### Setting up the Responses API examples
+To run the examples in `./ResponsesAPI` you first need to add an OpenAI API key to your environment:
 
-## Installing
-1. To use these exercise files, you must have the following installed:
-	- [list of requirements for course]
-2. Clone this repository into your local machine using the terminal (Mac), CMD (Windows), or a GUI tool like SourceTree.
-3. [Course-specific instructions]
+1. Go to [https://platform.openai.com](https://platform.openai.com) and sign in or sign up
+2. Generate a new key at [https://platform.openai.com/api-keys](https://platform.openai.com/api-keys)
+3. Copy the key (you only get to see it once).
+4. In Codespaces, open Terminal
+5. Set up a new environment variable like this:
+```bash
+export OPENAI_API_KEY="your_api_key_here"
+```
 
+### Running the examples
+The examples are self-contained and run in Terminal with the Python command:
+
+1. Open Terminal
+2. Navigate to one of the folders:
+```bash
+cd CompletionsAPI
+```
+3. Run a script using Python:
+```bash
+python basic-response.py
+```
+
+You are free to experiment by modifying and expanding these examples in any way you like!
 
 [0]: # (Replace these placeholder URLs with actual course URLs)
 
