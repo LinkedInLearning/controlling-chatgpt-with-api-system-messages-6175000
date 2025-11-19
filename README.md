@@ -1,24 +1,49 @@
 # Controlling ChatGPT with Custom Instructions or API System Messages
 This is the repository for the LinkedIn Learning course `Controlling ChatGPT with Custom Instructions or API System Messages`. The full course is available from [LinkedIn Learning][lil-course-url].
 
-![Controlling ChatGPT with Custom Instructions or API System Messages][lil-thumbnail-url] 
+![course-name-alt-text][lil-thumbnail-url] 
 
 Custom Instructions in ChatGPT allow you to provide additional context and even format the type of response you want from the system every time you interact with it. In the OpenAI Chat Completions API you can access the same functionality using the System and Assistant messages. In this short course, learn how to take advantage of these features to get more consistent and customizable responses from both systems.
 
-_See the readme file in the main branch for updated instructions and information._
 ## Instructions
-This repository has no branches. Each example featured in the course is contained in a separate file, named for the specific example. To follow along, open the relevant file and follow the instructions in the course.
+This repository provides examples of how to use message roles and the `instructions` parameter to control the output of OpenAI's language models.
 
-## Installing
-To run the queries in the example files, you need an OpenAI API key.
+> [!NOTE]
+> The easiest way to run and interact with the examples is by opening this repository in GitHub Codespaces.
 
-1. Sign up for the OpenAI API at https://platform.openai.com
-2. Generate a new key at https://platform.openai.com/account/api-keys.
+The examples are found in two folders:
+- `./CompletionsAPI` has examples using GitHub Models and the Completions API.
+- `./ResponsesAPI` has examples using OpenAI's API and the Responses API.
+
+### Setting up the Completions API examples
+If you're running the repository in GitHub Codespaces, the examples in `./CompletionsAPI` will work out of the box without any further setup. GitHub Models are automatically authenticated in the Codespace and the completions will generate when called.
+
+### Setting up the Responses API examples
+To run the examples in `./ResponsesAPI` you first need to add an OpenAI API key to your environment:
+
+1. Go to [https://platform.openai.com](https://platform.openai.com) and sign in or sign up
+2. Generate a new key at [https://platform.openai.com/api-keys](https://platform.openai.com/api-keys)
 3. Copy the key (you only get to see it once).
-4. Open `/.vscode/settings.json`` and paste your key where indicated (bottom of the file).
-5. Open open a file with the extension `.http`.
-6. In the bottom toolbar, click on the words "No Environment" and change the setting to "openai". This will activate your key in the file and allow it to be used.
+4. In Codespaces, open Terminal
+5. Set up a new environment variable like this:
+```bash
+export OPENAI_API_KEY="your_api_key_here"
+```
 
+### Running the examples
+The examples are self-contained and run in Terminal with the Python command:
+
+1. Open Terminal
+2. Navigate to one of the folders:
+```bash
+cd CompletionsAPI
+```
+3. Run a script using Python:
+```bash
+python basic-response.py
+```
+
+You are free to experiment by modifying and expanding these examples in any way you like!
 
 [0]: # (Replace these placeholder URLs with actual course URLs)
 

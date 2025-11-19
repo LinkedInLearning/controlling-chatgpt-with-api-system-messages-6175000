@@ -1,0 +1,28 @@
+{
+	"name": "Controlling ChatGPT with Personalization and Custom Instructions",
+	"customizations": {
+		"codespaces": {
+			"openFiles": [
+				"README.md"
+			]
+		},
+		"vscode": {
+			// Set *default* container specific settings.json values on container create.
+			"settings": {
+				"terminal.integrated.shell.linux": "/bin/bash"
+			},
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"linkedinlearning.linkedinlearning-vscode-theme",
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"ms-python.debugpy"
+				// Additional Extensions Here
+			]
+		}
+	},
+	// Update welcome text and set terminal prompt to '$ '
+	"onCreateCommand": "echo PS1='\"$ \"' >> ~/.bashrc",
+	"postCreateCommand": "pip install --user -r requirements.txt"
+}
+// DevContainer Reference: https://code.visualstudio.com/docs/remote/devcontainerjson-reference
