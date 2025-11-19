@@ -24,4 +24,3 @@ To run the queries in the example files, you need an OpenAI API key.
 
 [lil-course-url]: https://www.linkedin.com/learning/
 [lil-thumbnail-url]: https://media.licdn.com/dms/image/D560DAQHNB5iQOLKVZg/learning-public-crop_675_1200/0/1697831317907?e=2147483647&v=beta&t=quPDbS5456Kc3PFsKJhqeSDb88ucD6seeprYDxi6vqw
-
